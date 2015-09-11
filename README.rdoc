@@ -27,3 +27,7 @@ Login functionality
 Html/CSS
 
 Root/Main page
+
+Add other "optional" features
+
+Add in some testing
