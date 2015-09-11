@@ -12,7 +12,9 @@ def index
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservation = @restaurant.reservations.create(reservation_params)
+    @reservation.user = current_user
     if @reservation.save
       redirect_to user_path(session[:user_id])
     else
@@ -42,7 +44,7 @@ def index
 
   private
   def reservation_params
-    params.require(:reservation).permit(:date_time, :party_size)
+    params.require(:reservation).permit(:date_time, :party_size, :user_id, :restaurant_id)
   end
 
 end
