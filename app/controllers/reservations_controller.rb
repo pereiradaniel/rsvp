@@ -14,7 +14,7 @@ def index
   def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
-      redirect_to reservation_path(@reservation)
+      redirect_to user_path(session[:user_id])
     else
       render :new
     end
