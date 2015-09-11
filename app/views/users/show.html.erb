@@ -1,5 +1,10 @@
+<%= link_to "Back to Users", users_url %>
+
 <h1><%= @user.name  %></h1>
 
 <%= @user.email %>
+
+<%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %> | <%= link_to "Edit", edit_user_url %>
+
 
 

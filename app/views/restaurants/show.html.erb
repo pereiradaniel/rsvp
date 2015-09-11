@@ -1,3 +1,14 @@
+<%= link_to "Back to Restaurants", restaurants_url %>
+
 <h1><%= @restaurant.name %></h1>
 
   <%= @restaurant.capacity %>
+
+  <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_url %>
+
+
+
+
+
+
+

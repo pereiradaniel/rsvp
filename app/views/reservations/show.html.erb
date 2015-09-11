@@ -1,0 +1,14 @@
+<%= link_to "Back to Reservations", reservations_url %>
+
+<h1><%= @reservation.date_time %></h1>
+
+  <%= @reservation.party_size %>
+
+  <%= link_to "Delete", reservation_path(@reservation), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"}  %> | <%= link_to "Edit", edit_reservation_url %>
+
+
+
+
+
+
+
