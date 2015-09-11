@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :restaurants
   resources :reservations
 
+  root 'restaurants#index'
+
 end
