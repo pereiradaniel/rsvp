@@ -42,7 +42,7 @@ def index
 
   private
   def reservation_params
-    params.require(:reservation).permit(:name, :capacity)
+    params.require(:reservation).permit(:date_time, :party_size)
   end
 
 end
