@@ -1,5 +1,14 @@
 <h1>Add an awesome restaurant</h1>
 
+<% if @restaurant.errors.any? %>
+  <% @restaurant.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+<% end %>
+
+
+
+
 <%= link_to "Back to Restaurants", restaurants_url %>
 
 <%= form_for @restaurant do |f| %>
