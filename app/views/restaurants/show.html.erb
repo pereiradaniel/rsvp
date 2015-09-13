@@ -3,7 +3,14 @@
 <h1><%= @restaurant.name %></h1>
 
 <%= render partial: "/shared/errors", locals: {object: @reservation} %>
-<%= @restaurant.capacity %>
+Capacity: <%= @restaurant.capacity %>
+<p>Contact info:</p>
+  <li>Province: <%= @restaurant.province %></li>
+  <li>City: <%= @restaurant.city %></li>
+  <li>Street: <%= @restaurant.street %></li>
+  <li>Unit: <%= @restaurant.unit %></li>
+  <li>Phone number: <%= @restaurant.phone_number%></li>
+</ul>
 
 <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_url %>
 
