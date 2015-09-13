@@ -1,0 +1,12 @@
+<%= render partial: "/shared/errors", locals: {object: @restaurant} %>
+<%= link_to "Back to Restaurants", restaurants_url %>
+
+<%= form_for @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :capacity %>
+  <%= f.text_field :capacity %>
+
+  <%= f.submit %>
+<% end %>

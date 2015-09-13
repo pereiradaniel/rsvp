@@ -4,8 +4,6 @@ Play around with rails c more.
 
 Refactoring
 
-Add in user sign on page
-
 Other views?
 
 Partials

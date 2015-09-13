@@ -1,9 +1,0 @@
-<h1>List of Reservations</h1>
-<ul>
-<% @reservations.each do |reservation| %>
-  <li><%= link_to reservation.date_time, reservation_path(reservation.id) %></li>
-  <li><%= reservation.party_size %></li>
-<% end %>
-</ul>
-
-<%= link_to "Add reservation", new_reservation_path %>
