@@ -1,0 +1,109 @@
+As a visitor, I want to see a directory of the restaurants available.
+As a visitor, when I click on a restaurant, I want to be able to see:
+address
+neighbourhood
+price range
+summary
+menu
+a list of available timeslots
+As a visitor, I want to sign up for a customer account so that I can make reservations online.
+
+As a customer, I want to receive loyalty points when I make a reservation.
+As a customer, I want to see my loyalty points in my account profile.
+As a customer, I want to receive an email confirmation after I've made a reservation.
+As the restaurant owner, I want to see the list of the weeks reservations.
+As the restaurant owner, I want to see my customer list with how many points each person has and how much they have spent online.
+As a visitor, I would like to be able to view restaurants based on their cuisine category (e.g. Italian). This can be down with a drop-down menu using collection_select.
+A restaurant can only be open from 11am - 8pm, 7 days a week.
+A restaurant can only hold 100 people in any given time slot.
+A reservation can be for a party of 2 to 20 people.
+
+
+** Required **
+
+As a customer, I want to be able to make a reservation online.
+As a customer, I want to be able to choose a time for my reservation
+As a customer, I want to be able to cancel a reservation
+As a customer, I want to be able to modify a reservation
+As restaurant owner, I want to be able to add a restaurant
+  As a restaurant owner, I want to add my contact information
+As a customer, I want to be able to see a list of restaurants
+As a user I want to be able to make an account
+
+** Key Words **
+
++ reservation
+  - has a time and date
+  - Party size
+  - restaurant
+
++ Restaurant
+
++ User
+
+** Assumptions **
+
+Overlaps - restaurant's responsibility
+fixed reservation blocks, maximum reservation block time - 1 hour
+maximum party size  - 8
+table arrangements? - restaurant's responsibility
+
+** should have **
+
++ Site Wide
+  - navigation bar
+
++ Index Page
+  - a way to search for restaurants
+    - You should be able to select restaurants by cuisine type
+    - price range
+    - area
+
++ Log in
+  - password recovery
+    - password reset
+
+  - OAuth, sign in with facebook, google, or twitter
+
++ Restaurants
+  - see restaurant details
+    - Contact information
+    - menu
+    - pictures
+    - ratings/reviews
+    - availability
+    - proximity, how far away it is from current location
+
++ User
+  - Make user a restaurant owner
+  - Edit reservation, edit and cancel
+  - reservation history
+  - add reviews
+  - basic info
+  - profile picture
+
+
+** Priority **
+
++ Navigation Bar
++ Restaurant search
+  - Cuisine type
+
++ Restaurant Information
+  - Contact details
+    - address
+      - postal code, city, prov, street
+    -phone number
+  - availability
+    - updates as bookings are made
+
++ Users
+ - Users as owner of a restaurant
+ - Edit reservations
+
+
+** Assumptions **
+
+availability - will prompt user if available upon submission
+
+cuisine type will be selected through a checklist
