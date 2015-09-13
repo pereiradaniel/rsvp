@@ -5,13 +5,31 @@
 <%= render partial: "/shared/errors", locals: {object: @reservation} %>
 <%= @restaurant.capacity %>
 
+
 <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_url %>
 
 <% if current_user %>
   <%= form_for ([@restaurant, @reservation]) do |f| %>
     <ul>
-      <li><%= f.label :date_time %></li>
-      <li><%= f.datetime_field :date_time %></li>
+		<div class="container">
+		    <div class="row">
+		        <div class='col-sm-6'>
+		            <div class="form-group">
+		                <div class='input-group date' id='datetimepicker1'>
+		                    <input type='text' class="form-control" name="reservation[date_time]" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		            </div>
+		        </div>
+		        <script type="text/javascript">
+		            $(function () {
+		                $('#datetimepicker1').datetimepicker();
+		            });
+		        </script>
+		    </div>
+		</div>
 
       <li><%= f.label :party_size %></li>
       <li><%= f.text_area :party_size %></li>
