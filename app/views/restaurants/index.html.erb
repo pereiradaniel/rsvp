@@ -2,7 +2,6 @@
 <ul>
 <% @restaurants.each do |restaurant| %>
   <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
-  <li><%= restaurant.capacity %></li>
 <% end %>
 </ul>
 

@@ -5,10 +5,12 @@
 <%= @user.email %>
 
 <div>
-<%= @user.reservations.each do |res| %>
-  <%= res.date_time %>
-  <%= res.restaurant.name %>
-<% end %>
+  <% @user.reservations.each do |res| %>
+    <ul>
+      <li><%= res.date_time %></li>
+      <li><%= res.restaurant.name %></li>
+    </ul>
+  <% end %>
 </div>
 <%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %> | <%= link_to "Edit", edit_user_url %>
 

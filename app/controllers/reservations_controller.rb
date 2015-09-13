@@ -18,7 +18,7 @@ def index
     if @reservation.save
       redirect_to user_path(session[:user_id])
     else
-      render :new
+      render restaurant_url(@restaurant)
     end
   end
 
@@ -32,7 +32,7 @@ def index
     if @reservation.update_attributes(reservation_params)
       redirect_to reservation_path(@reservation)
     else
-      reder :edit
+      render :edit
     end
   end
 
