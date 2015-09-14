@@ -15,7 +15,6 @@
 //= require turbolinks
 
 //= require moment
-//= require bootstrap-datetimepicker
 
 //= require bootstrap-sprockets
 

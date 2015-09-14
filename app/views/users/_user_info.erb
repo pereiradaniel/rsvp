@@ -1,15 +1,17 @@
-<h2>Account info</h2>
-<ul>
-  <li>E-mail: <%= @user.email %></li>
-  <li><%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %> | <%= link_to "Edit", edit_user_url %></li>
+<h3>Account info</h3>
+<ul>Details:
+  <ul>User: <%= @user.name %>
+    <li>E-mail: <%= @user.email %></li>
+    <li><%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %> | <%= link_to "Edit", edit_user_url %></li>
+  </ul>
 </ul>
 
 
 <h3>Owned restaurants</h3>
-<ul>
+<ul>Restaurant information: 
   <% if @user.restaurants %>
-    <% @user.restaurants.each do |res| %>
-    <ul>
+    <% @user.owned_restaurants.each do |res| %>
+    <ul>Restaurant ID: <%= res.id %>
       <li>Restaurant name: <%= res.name %></li>
       <li>Seating capacity: <%= res.capacity %></li>
       <li><%= link_to "Delete", restaurant_path(res), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_path(res) %></li>

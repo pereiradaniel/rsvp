@@ -1,3 +1,3 @@
 class Cusine < ActiveRecord::Base
-  has_and_belongs_to_many :restaurants
+  has_many :restaurants
 end
