@@ -10,9 +10,11 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @cuisines = Cuisine.all
   end
 
   def create
+    @cuisines = Cuisine.all
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.owner = current_user
     if @restaurant.save
@@ -24,6 +26,7 @@ class RestaurantsController < ApplicationController
 
   def edit
     @restaurant = Restaurant.find(params[:id])
+    @cuisines = Cuisine.all
   end
 
   def update
@@ -44,6 +47,6 @@ class RestaurantsController < ApplicationController
 
   private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :capacity, :province, :city, :street, :postal_code, :phone_number)
+    params.require(:restaurant).permit(:name, :capacity, :province, :city, :street, :postal_code, :phone_number, :cuisine_ids => [])
   end
 end

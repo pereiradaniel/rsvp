@@ -25,6 +25,11 @@
     <li><%= f.label :phone_number %></li>
     <li><%= f.telephone_field :phone_number %></li>
 
+    <% @cuisines.each do |cuisine| %>
+        <%= check_box_tag "restaurant[cuisine_ids][]", cuisine.id, cuisine.id.in?(@restaurant.cuisines.collect(&:id)) %>
+        <%= cuisine.name %>
+    <% end %>
+
     <li><%= f.submit %></li>
   </ul>
 <% end %>

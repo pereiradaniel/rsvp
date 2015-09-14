@@ -18,5 +18,8 @@ Reservation.create!(date_time: DateTime.now, party_size: "8", user_id: 1, restau
 Reservation.create!(date_time: DateTime.now, party_size: "6", user_id: 2, restaurant_id: 2)
 Reservation.create!(date_time: DateTime.now, party_size: "7", user_id: 3, restaurant_id: 3)
 
-
+cuisine_names = ["thai", "italian", "chinese", "Organic", "Savage"]
+cuisine_names.each do |name|
+  Cuisine.create!(name: name)
+end
 
