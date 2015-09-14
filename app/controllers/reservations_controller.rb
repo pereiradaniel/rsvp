@@ -28,7 +28,7 @@ def index
 
   def update
     @reservation = Reservation.find(params[:id])
-    @user = @reservation.id
+    @user = @reservation.user_id
     if @reservation.update_attributes(reservation_params)
       redirect_to user_path(@user)
     else
@@ -38,8 +38,9 @@ def index
 
   def destroy
     @reservation = Reservation.find(params[:id])
+    @user = @reservation.user_id
     @reservation.destroy
-    redirect_to reservations_path
+    redirect_to user_path(@user)
   end
 
   private
