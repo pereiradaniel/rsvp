@@ -4,11 +4,11 @@
 
 <%= render partial: "/shared/errors", locals: {object: @reservation} %>
 
-<%= render 'restaurant_info' %>
+<%= render 'restaurants/restaurant_info' %>
 
 <% if current_user %>
-  <%= render 'resform' %>
-  <%= render 'viewreservations' %>
+  <%= render 'restaurants/resform' %>
+  <%= render 'restaurants/viewreservations' %>
 <% else %>
   <p>Login to create a reservation.</p>
 <% end %>

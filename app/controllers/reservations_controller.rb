@@ -18,7 +18,7 @@ def index
     if @reservation.save
       redirect_to user_path(session[:user_id])
     else
-      redirect_to restaurant_url(@restaurant)
+      render 'restaurants/show'
     end
   end
 
