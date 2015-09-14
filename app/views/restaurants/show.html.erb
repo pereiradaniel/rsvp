@@ -9,9 +9,10 @@ Capacity: <%= @restaurant.capacity %>
   <p><%= @restaurant.city %>, <%= @restaurant.province %>, <%= @restaurant.postal_code%></p>
   Phone number: <%= @restaurant.phone_number%>
 
-
+<% if current_user && current_user.id == @restaurant.owner_id %>
 <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_url %>
-
+<% else %>
+<% end %>
 <% if current_user %>
   <%= form_for ([@restaurant, @reservation]) do |f| %>
     <ul>
