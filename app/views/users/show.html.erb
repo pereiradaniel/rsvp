@@ -4,15 +4,8 @@
 
 E-mail: <%= @user.email %>
 
-<div>
-  <% @user.reservations.each do |res| %>
-    <ul> Reservation information:
-      <li>Date/Time: <%= res.date_time %></li>
-      <li>Location: <%= res.restaurant.name %></li>
-      <li>Party size: <%= res.party_size %></li>
-    </ul>
-  <% end %>
-</div>
+<%= render 'viewreservations' %>
+
 <%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %> | <%= link_to "Edit", edit_user_url %>
 
 

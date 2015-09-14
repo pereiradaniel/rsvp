@@ -1,0 +1,7 @@
+<% @user.reservations.each do |res| %>
+  <ul> Reservation information:
+    <li>Date/Time: <%= res.date_time %></li>
+    <li>Location: <%= res.restaurant.name %></li>
+    <li>Party size: <%= res.party_size %></li>
+  </ul>
+<% end %>
