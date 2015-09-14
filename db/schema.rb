@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914012917) do
+ActiveRecord::Schema.define(version: 20150914191045) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "type"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150914012917) do
     t.string   "city"
     t.string   "street"
     t.string   "postal_code"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.integer  "owner_id"
   end
 
