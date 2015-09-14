@@ -1,29 +1,32 @@
 <%= render partial: "/shared/errors", locals: {object: @restaurant} %>
 <%= link_to "Back to Restaurants", restaurants_url %>
 
+
 <%= form_for @restaurant do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <ul>
+    <li><%= f.label :name %></li>
+    <li><%= f.text_field :name %></li>
 
-  <%= f.label :capacity %>
-  <%= f.number_field :capacity %>
+    <li><%= f.label :capacity %></li>
+    <li><%= f.number_field :capacity %></li>
 
-  <%= f.label :province %>
-  <%= f.text_field :province %>
+    <li><%= f.label :province %></li>
+    <li><%= f.text_field :province %></li>
 
-  <%= f.label :city %>
-  <%= f.text_field :city %>
+    <li><%= f.label :city %></li>
+    <li><%= f.text_field :city %></li>
 
-  <%= f.label :street %>
-  <%= f.text_field :street %>
+    <li><%= f.label :street %></li>
+    <li><%= f.text_field :street %></li>
 
-  <%= f.label :postal_code %>
-  <%= f.text_field :postal_code %>
+    <li><%= f.label :postal_code %></li>
+    <li><%= f.text_field :postal_code %></li>
 
-  <%= f.label :phone_number %>
-  <%= f.telephone_field :phone_number %>
+    <li><%= f.label :phone_number %></li>
+    <li><%= f.telephone_field :phone_number %></li>
 
-  <%= f.submit %>
+    <li><%= f.submit %></li>
+  </ul>
 <% end %>
 
 

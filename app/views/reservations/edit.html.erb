@@ -1,4 +1,7 @@
-<h2>Make a reservation</h2>
+<h2>Edit a reservation</h2>
+<% @reservation = Reservation.find(params[:id]) %>
+<% @restaurant = Restaurant.find(params[:id]) %>
+
 <%= form_for ([@restaurant, @reservation]) do |f| %>
   <ul>
     <div class="container">

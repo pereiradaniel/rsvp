@@ -1,0 +1,17 @@
+<ul>
+  <li>Capacity: <%= @restaurant.capacity %></li>
+  <li>Address: </li>
+    <ul>
+      <li><%= @restaurant.street %></li>
+      <li><%= @restaurant.city %>, <%= @restaurant.province %></li>
+      <li>Postal code: <%= @restaurant.postal_code%></li>
+    </ul>
+  <li>Phone number: <%= @restaurant.phone_number%></li>
+  
+  <% if current_user && current_user.id == @restaurant.owner_id %>
+  <li><%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_url %></li>
+  <% else %>
+<% end %>
+
+
+</ul>

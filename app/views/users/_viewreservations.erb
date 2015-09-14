@@ -1,7 +1,9 @@
+<h2><%= @user.name %>'s reservations</h2>
 <% @user.reservations.each do |res| %>
   <ul> Reservation information:
     <li>Date/Time: <%= res.date_time %></li>
     <li>Location: <%= res.restaurant.name %></li>
     <li>Party size: <%= res.party_size %></li>
+    <li><%= link_to "Delete", restaurant_reservation_path(res.restaurant.id, res.id), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> | <%= link_to "Edit", edit_restaurant_reservation_path(res.restaurant.id, res.id) %></li>
   </ul>
 <% end %>

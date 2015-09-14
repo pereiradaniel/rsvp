@@ -1,3 +1,4 @@
+<h2>Current reservations at <%= @restaurant.name %></h2>
 <% current_user.reservations.each do |res| %>
   <% if res.restaurant_id == @restaurant.id %>
     <ul> Reservation information:
