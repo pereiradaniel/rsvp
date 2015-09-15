@@ -6,6 +6,11 @@
   <li><%= @restaurant.city %>, <%= @restaurant.province %></li>
   <li>Postal code: <%= @restaurant.postal_code%></li>
   <li>Phone number: <%= @restaurant.phone_number%></li>
+  <li>Cuisine type:
+    <% @restaurant.cuisines.each do |cuisine_type| %>
+    <%= cuisine_type.name %>
+    <% end %>
+  </li>
 </ul>
 
 

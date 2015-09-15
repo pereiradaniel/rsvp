@@ -7,6 +7,6 @@ class Restaurant < ActiveRecord::Base
   accepts_nested_attributes_for :cuisines
 
   #attr_accessible :street, :latitude, :longitude
-  geocoded_by :street
+  geocoded_by :postal_code
   after_validation :geocode
 end

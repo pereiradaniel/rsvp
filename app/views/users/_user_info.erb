@@ -16,7 +16,11 @@
       <li>Restaurant ID: <%= res.id %></li>
       <li>Restaurant name: <%= res.name %></li>
       <li>Seating capacity: <%= res.capacity %></li>
-      <li>
+      <li>Cuisine type:
+        <% res.cuisines.each do |cuisine_type| %>
+          <%= cuisine_type.name %> 
+        <% end %>
+      </li>
     </ul>
     <ul class="list-unstyled list-inline">
       <li>
