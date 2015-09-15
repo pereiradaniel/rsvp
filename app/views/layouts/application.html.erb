@@ -7,24 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul>
-    <% flash.each do |name, msg| -%>
-      <li><%= content_tag :div, msg, class: name %></li>
-    <% end %>
-  </ul>
+  <div class="row container-fluid">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="bg-warning">
+        <% flash.each do |name, msg| -%>
+          <li><%= content_tag :div, msg, class: name %></li>
+        <% end %>
+      </div>
 
-  <%= yield %>
+      <%= yield %>
 
-  <% if current_user %>
-    <ul>
-      <li>Signed in as <%= current_user.name %></li>
-      <li><%= link_to "Profile", user_path(current_user) %></li>
-      <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
-    </ul>
-  <% else %>
-  <div>
-    <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% if current_user %>
+        <ul class="list-unstyled list-inline">
+          <li><i>Signed in as <%= current_user.name %></i></li>
+          <li class="btn btn-default"><%= link_to "Profile", user_path(current_user) %></li>
+          <li class="btn btn-default"><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+        </ul>
+      <% else %>
+        <div>
+          <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <% end %>
 </body>
 </html>

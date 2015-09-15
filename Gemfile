@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -48,6 +51,9 @@ group :development do
   # gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
+
+  # factory girl
+  gem 'factory_girl_rails'
 
 end
 

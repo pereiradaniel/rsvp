@@ -1,7 +1,9 @@
-<% if object.errors.any? %>
-  <ul>
-    <% object.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div>
+  <% if object.errors.any? %>
+    <ul class="list-unstyled">
+      <% object.errors.full_messages.each do |msg| %>
+        <li class="bg-warning"><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

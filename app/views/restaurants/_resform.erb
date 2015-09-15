@@ -1,9 +1,11 @@
 <h3>Make a reservation</h3>
 <%= form_for ([@restaurant, @reservation]) do |f| %>
 <%= f.datetime_select :date_time %>
-    <li><%= f.label :party_size %></li>
-    <li><%= f.text_area :party_size %></li>
-
-    <li><%= f.submit %></li>
-  </ul>
+  <div class="form-group">
+    <%= f.label :party_size %>
+    <%= f.text_area :party_size %>
+  </div>
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
 <% end %>
