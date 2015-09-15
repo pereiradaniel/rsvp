@@ -5,6 +5,7 @@
 <%= render partial: "/shared/errors", locals: {object: @reservation} %>
 
 <%= render 'restaurants/restaurant_info' %>
+<%= render 'restaurants/display_map' %>
 
 <% if current_user %>
   <%= render 'restaurants/resform' %>

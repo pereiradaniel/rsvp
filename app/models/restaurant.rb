@@ -5,4 +5,8 @@ class Restaurant < ActiveRecord::Base
   belongs_to :owner, class_name: "User"
   has_and_belongs_to_many :cuisines
   accepts_nested_attributes_for :cuisines
+
+  #attr_accessible :street, :latitude, :longitude
+  geocoded_by :street
+  after_validation :geocode
 end

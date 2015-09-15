@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914200816) do
+ActiveRecord::Schema.define(version: 20150915040412) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20150914200816) do
     t.string   "postal_code"
     t.string   "phone_number"
     t.integer  "owner_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", force: :cascade do |t|

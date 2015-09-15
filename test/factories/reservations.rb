@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :reservation do
+  factory :reservation, :class => 'Reservations' do
     
   end
 
