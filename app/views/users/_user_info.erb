@@ -24,9 +24,7 @@
     </ul>
     <ul class="list-unstyled list-inline">
       <li>
-        <%= link_to "Delete", restaurant_path(res), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %>
-      </li>
-      <li>
+        <%= link_to "Delete", restaurant_path(res), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %> 
         <%= link_to "Edit", edit_restaurant_path(res) %>
       </li>
     </ul>
